@@ -12,7 +12,7 @@ public class JdbcAccess {
              
              Class.forNome (net.ucanaccess.jdbc.ucanaccessDrives"); 
 	     Connection con=DriverManager.getConnection (dataURL);
-            String sql = "INSERT INTO Employee (Full_Name, Email, Phone) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO Employee (Eid, Ename,Eadd) VALUES (?, ?, ?)";
              
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, "101");
@@ -32,7 +32,7 @@ public class JdbcAccess {
              
             while (rs.next()) {
                 int id = rs.getInt("Employee_no");
-                String eid = rs.getString("eid");
+                String eid = rs.getString("Eid");
                 String ename = rs.getString("Ename");
                 String eadd = rs.getString("Eadd");
                  
